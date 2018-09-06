@@ -17,6 +17,7 @@ I'm putting this out for testing.  I wrote it in response to the threads in the 
 If you're using script_manager, add it to your downloads directory and enable it.
 
 Otherwise, cd to your lua directory and do a git clone https://github.com/wpferguson/correct-lens.  Then edit your luarc file and include the line
+
   require "correct-lens/correct_lens"
 
 _correct_lens.lua_ relies on the lua-scripts libraries, so it's recommended that you have the full lua-scripts repository installed.
@@ -28,6 +29,8 @@ Select images with mis-identified lenses, then click the detect button in the co
 If for some reason you need to go back to the original information, select the images and click revert.
 
 ## Notes
+
+This program modifies image information in your library.db file.  You might want to make a backup copy prior to using this script, just to be on the safe side.  I haven't encountered any problems, other than my typing, but YMMV.
 
 It's **SLOW**.  I average 2 images per second.  I have a fast processor, lots of memory and an SSD.  Your performance might be worse.
 
