@@ -20,7 +20,7 @@ Otherwise, cd to your lua directory and do a git clone https://github.com/wpferg
 
   require "correct-lens/correct_lens"
 
-_correct_lens.lua_ relies on the lua-scripts libraries, so it's recommended that you have the full lua-scripts repository installed.
+**correct_lens.lua_**relies on the lua-scripts libraries, so it's recommended that you have the full lua-scripts repository installed.
 
 ## Usage
 
@@ -33,5 +33,7 @@ If for some reason you need to go back to the original information, select the i
 This program modifies image information in your library.db file.  You might want to make a backup copy prior to using this script, just to be on the safe side.  I haven't encountered any problems, other than my typing, but YMMV.
 
 It's **SLOW**.  I average 2 images per second.  I have a fast processor, lots of memory and an SSD.  Your performance might be worse.
+
+If you are modifying a lot of images (>100) then darktable will not respond while the images are updating.  I tried using a progress bar and I tried writing messages to the screen, but the I/O is so heavy and the loop so tight that the progress bar and messages don't update the screen.  When I'm doing a lot of images, I select them, then start the process, then I click on a single image.  When all the images are updated, the single image will be selected so I know it's finished.
 
 Problems, ideas, etc., e-mail me at wpferguson@gmail.com
